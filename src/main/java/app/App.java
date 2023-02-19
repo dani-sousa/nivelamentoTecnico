@@ -11,9 +11,9 @@ public class App {
     public static void main(String[] args) {
         Viagem viagem = new Viagem(Destinos.OSASCO);
 
-        viagem.setDestino(Destinos.MARINGA);
+      //  viagem.setDestino(Destinos.MARINGA);
 
-        viagem.setDestino(Destinos.MANAUS);
+       // viagem.setDestino(Destinos.MANAUS);
 
         Acompanhante acompanhante1 = new Acompanhante();
         acompanhante1.setNome("Harlyson Biscardi");
@@ -23,9 +23,14 @@ public class App {
         acompanhante2.setNome("Amora Karoline");
         acompanhante2.setConfirmouCadastro(false);
 
+        Acompanhante acompanhante3 = new Acompanhante();
+        acompanhante3.setNome("Daniela Sousa Mendes");
+        acompanhante3.setConfirmouCadastro(true);
+
         List<Acompanhante> acompanhantes = new ArrayList<Acompanhante>();
         acompanhantes.add(acompanhante1);
         acompanhantes.add(acompanhante2);
+        acompanhantes.add(acompanhante3);
 
         viagem.setAcompanhantes(acompanhantes);
 
@@ -38,6 +43,18 @@ public class App {
         //0 = "Harlyson"
         //1 = "Amora"
         System.out.println(viagem.getAcompanhantes().get(1).getNome());
+        System.out.println(viagem.getAcompanhantes().get(2).getNome());
 
+        //metodo mais arcaico de incluir laços de repetições aqui cada vez que roda soma + um acompanhante
+        // for (int iterador = 0 ; iterador < viagem.getAcompanhantes().size() ; iterador++ ) {
+        //   System.out.println(viagem.getAcompanhantes().get(iterador).getNome());
+        //  System.out.println(viagem.getAcompanhantes().get(iterador).isConfirmouCadastro());
+        //}
+
+        //metodo mais robusto de incluir laços de repetições
+        for (Acompanhante acompanhante: viagem.getAcompanhantes()) {
+            System.out.println(acompanhante.getNome());
+            System.out.println(acompanhante.isConfirmouCadastro());
+        }
     }
 }

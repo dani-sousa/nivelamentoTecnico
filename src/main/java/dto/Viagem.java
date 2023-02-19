@@ -38,5 +38,4 @@ public class Viagem {
 //aula enums:
 //são tipos predefinidos para ser utilizados pelo código
 
-//aula listas:
 //
