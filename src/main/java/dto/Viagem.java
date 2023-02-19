@@ -26,8 +26,9 @@ public class Viagem {
         return this.acompanhantes;
     }
 
-    public void setAcompanhantes(List<Acompanhante> acompanhantes) {
+    public int setAcompanhantes(List<Acompanhante> acompanhantes) throws Exception {
         this.acompanhantes = acompanhantes;
+        return 0;
     }
 }
 
@@ -38,5 +39,4 @@ public class Viagem {
 //aula enums:
 //são tipos predefinidos para ser utilizados pelo código
 
-//aula listas:
 //
