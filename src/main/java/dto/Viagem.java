@@ -1,10 +1,12 @@
 package dto;
 
 import enums.Destinos;
+import java.util.List;
 
 //private serve para proteger atributos
 public class Viagem {
     private Destinos destino;
+    private List<Acompanhante> acompanhantes;
 
     public Viagem(Destinos lugarDeDestino) {
         this.destino = lugarDeDestino;
@@ -18,7 +20,14 @@ public class Viagem {
     //set é um configurador ele joga a informação
     public void setDestino(Destinos lugarDeDestino) {
         this.destino = lugarDeDestino;
+    }
 
+    public List<Acompanhante> getAcompanhantes() {
+        return this.acompanhantes;
+    }
+
+    public void setAcompanhantes(List<Acompanhante> acompanhantes) {
+        this.acompanhantes = acompanhantes;
     }
 }
 
@@ -28,3 +37,6 @@ public class Viagem {
 
 //aula enums:
 //são tipos predefinidos para ser utilizados pelo código
+
+//aula listas:
+//
