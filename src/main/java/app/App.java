@@ -32,6 +32,7 @@ public class App {
         acompanhantes.add(acompanhante2);
         acompanhantes.add(acompanhante3);
 
+
         try {
             viagem.setAcompanhantes(acompanhantes);
         } catch (Exception excecao) {
