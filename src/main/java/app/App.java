@@ -31,7 +31,7 @@ public class App {
         acompanhantes.add(acompanhante1);
         acompanhantes.add(acompanhante2);
         acompanhantes.add(acompanhante3);
-
+        acompanhantes.add(acompanhante3);
 
         try {
             viagem.setAcompanhantes(acompanhantes);
@@ -71,7 +71,7 @@ public class App {
         }
         viagemNacional1.setCpf("02252589999");
 
-        ViagemInternacional viagemInternacional1 = new ViagemInternacional(Destinos.MIAMI);
+        ViagemInternacional viagemInternacional1 = new ViagemInternacional(Destinos.ACAPULCO);
         try {
             viagemInternacional1.setAcompanhantes(acompanhantes);
         } catch (Exception excessao){
@@ -85,5 +85,8 @@ public class App {
 
         System.out.println(viagemNacional1.getCpf());
         System.out.println(viagemInternacional1.getPassaporte());
+
+        System.out.println(viagemInternacional1.calcularPrevisaoDeDiasParaRetorno());
+        System.out.println(viagemNacional1.calcularPrevisaoDeDiasParaRetorno());
     }
 }
